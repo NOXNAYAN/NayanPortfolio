@@ -1,0 +1,296 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --bg-color: #121212;
+    --primary-color: #1f1f1f;
+    --secondary-color: #2a2a2a;
+    --accent-color: #00aaff;
+    --text-color: #e0e0e0;
+    --text-muted: #888888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section {
+    padding: 6rem 5%;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x1080/1a1a1a/808080?text=Your+Background+Image') no-repeat center center/cover;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin: 1rem 0 2rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0088cc;
+}
+
+/* --- Portfolio Section --- */
+#portfolio {
+    background-color: var(--primary-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 2rem 1rem 1rem;
+    color: white;
+}
+
+.item-overlay h3 {
+    font-size: 1.5rem;
+}
+
+/* --- 3D Viewer Section --- */
+#viewer {
+    text-align: center;
+}
+
+.viewer-instructions {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+#canvas-container {
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+#model-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* --- About Section --- */
+#about {
+    background-color: var(--primary-color);
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+}
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+.about-text li {
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+
+/* --- Contact Section --- */
+#contact {
+    text-align: center;
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.contact-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.contact-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem 5%;
+    background-color: var(--primary-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- Portfolio Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--primary-color);
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: white;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateY(-50px); } to { transform: translateY(0); } }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    nav ul { display: none; } /* Simple hiding for mobile, can be replaced with a hamburger menu */
+    .about-content { flex-direction: column; text-align: center; }
+}

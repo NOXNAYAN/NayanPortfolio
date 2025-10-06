@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayan Tupe - 3D Game Artist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#hero" class="nav-logo">Nayan Tupe</a>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#viewer">3D Viewer</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>3D Game Artist</h1>
+                <p>Creating immersive worlds and characters through modeling, sculpting, and texturing.</p>
+                <a href="#portfolio" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-title="Cyberpunk Speeder" data-role="Hard Surface Vehicle Modeling" data-tools="Blender, Substance Painter, Marmoset Toolbag" data-desc="Designed and modeled a futuristic anti-gravity vehicle. Responsible for high-poly and low-poly modeling, UV unwrapping, PBR texturing, and final renders.">
+                    <img src="./assets/images/Pepe.jpg" alt="Cyberpunk Speeder">
+                    <div class="item-overlay"><h3>Cyberpunk Speeder</h3></div>
+                </div>
+                <div class="portfolio-item" data-title="Forest Guardian" data-role="Character Sculpting & Texturing" data-tools="ZBrush, Maya, Substance Painter, Unreal Engine" data-desc="Sculpted a high-poly character in ZBrush, created a game-ready low-poly model with optimized topology in Maya, and textured it using PBR workflows. Integrated and rendered in Unreal Engine.">
+                    <img src="assets/images/project2-thumb.jpg" alt="Forest Guardian">
+                    <div class="item-overlay"><h3>Forest Guardian</h3></div>
+                </div>
+                <div class="portfolio-item" data-title="Forgotten Temple Environment" data-role="Environment & Prop Art" data-tools="Maya, ZBrush, Substance Designer, Unreal Engine" data-desc="Built a full game environment from modular kits. Created props, tileable textures in Substance Designer, and assembled the scene in Unreal Engine 5, focusing on lighting and composition.">
+                    <img src="assets/images/project3-thumb.jpg" alt="Forgotten Temple">
+                    <div class="item-overlay"><h3>Forgotten Temple</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="viewer">
+            <h2>Interactive 3D Model</h2>
+            <p class="viewer-instructions">Click and drag to rotate | Scroll to zoom | Right-click and drag to pan</p>
+            <div id="canvas-container">
+                <canvas id="model-canvas"></canvas>
+            </div>
+            
+        </section>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="./assets/images/Pepe.jpg" alt="Nayan Tupe" class="profile-pic">
+                <div class="about-text">
+                    <p>I am a passionate 3D Artist with 5 years of experience in the gaming industry, specializing in character and hard-surface modeling. My goal is to bring compelling stories to life through visually stunning and technically optimized assets. I thrive in collaborative environments and am always eager to learn new techniques.</p>
+                    <h3>Skills & Software</h3>
+                    <ul>
+                        <li><strong>Modeling:</strong> Blender, Maya, ZBrush</li>
+                        <li><strong>Texturing:</strong> Substance Painter, Substance Designer, Photoshop</li>
+                        <li><strong>Rendering:</strong> Marmoset Toolbag, Unreal Engine, Unity</li>
+                        <li><strong>Core Skills:</strong> High-poly Sculpting, Retopology, UV Unwrapping, PBR Texturing, Game Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>I'm currently available for freelance and full-time opportunities.</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-button">Email Me</a>
+                <a href="https://www.linkedin.com/in/yourprofile/" target="_blank" class="contact-button">LinkedIn</a>
+                <a href="https://www.artstation.com/yourprofile" target="_blank" class="contact-button">ArtStation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nayan Tupe. All Rights Reserved.</p>
+    </footer>
+
+    <div id="portfolio-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p><strong>Role:</strong> <span id="modal-role"></span></p>
+            <p><strong>Tools:</strong> <span id="modal-tools"></span></p>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
